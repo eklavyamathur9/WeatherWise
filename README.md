@@ -1,157 +1,139 @@
-# 🌦️ WeatherWise
+# WeatherWise 🌤️
 
-**WeatherWise** is a modern, fully interactive weather application built with React, Express, and Tailwind CSS. Search by city or location, view real-time weather updates, and explore detailed 5-day forecasts — all wrapped in a beautifully animated, responsive experience.
-
----
+WeatherWise is a modern, responsive weather forecast application built with Vite and ReactJS that provides real-time weather updates with a clean, minimalist design.
 
 ## ✨ Features
 
-* 🔍 **Search weather** by city name or current location (Geolocation)
-* 🌡️ **Real-time weather:** Temperature, humidity, wind speed, and conditions (sunny, rainy, cloudy, etc.)
-* 📅 **5-day weather forecast** with daily highs and lows
-* 🎨 **Dynamic visuals/icons** that match current weather
-* 📱 **Responsive UI** for both mobile and desktop
-* 🔎 **Autocomplete/suggestion search bar**
-* 🌍 **Celsius/Fahrenheit toggle**
-* 📊 **Interactive forecast cards & trend charts (Chart.js)**
-* ⚡ **Smooth animations & transitions**
-* 🛡️ **Robust error handling & loading animations**
-* 🔑 **Secure API proxy via backend** to hide API keys
+- 🌍 Real-time weather updates
+- 📱 Fully responsive design for desktop and mobile devices
+- 📍 Location-based weather results
+- 🎨 Clean and minimalist UI/UX
+- ⚡ Fast performance with Vite build tool
+- 🌡️ Temperature display in Celsius/Fahrenheit
+- 📊 Additional weather details (humidity, wind speed, etc.)
 
----
+## 🚀 Live Demo
 
-## 🛠 Tech Stack
+Check out the live application here: [WeatherWise Live](https://weather-wise-orpin-one.vercel.app/)
 
-* **Frontend:** React (or Next.js), Tailwind CSS
-* **Backend:** Node.js, Express.js
-* **API:** [OpenWeatherMap API](https://openweathermap.org/api)
-* **Charts:** Chart.js
+![WeatherWise Screenshot](<img width="604" height="808" alt="image" src="https://github.com/user-attachments/assets/3bdbf799-03ce-4591-8d9e-702aaa588094" />
+)
 
----
+## 🛠️ Getting Started
 
-## 📂 Project Structure
+### Prerequisites
 
-```
-WeatherWise/
-├── backend/            # Express backend for API proxy and env handling
-│   ├── index.js
-│   ├── package.json
-│   └── .env
-├── frontend/           # React frontend with Tailwind styling
-│   ├── src/
-│   │   ├── components/
-│   │   │   ├── WeatherCard.js
-│   │   │   ├── ForecastChart.js
-│   │   ├── App.js
-│   │   ├── index.js
-│   │   └── index.css
-│   ├── tailwind.config.js
-│   └── package.json
-└── README.md
-```
+- React.js
+- npm or yarn package manager
 
----
+### Installation
 
-## 🚀 Getting Started
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/weatherwise.git
+   cd weatherwise
+   ```
 
-### 1️⃣ Clone the repository
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-```bash
-git clone https://github.com/yourusername/WeatherWise.git
-cd WeatherWise
-```
+3. **Set up environment variables**
+   Create a `.env` file in the root directory and add your OpenWeatherMap API key:
+   ```
+   VITE_WEATHER_API_KEY=your_api_key_here
+   ```
 
----
+4. **Run the development server**
+   ```bash
+   npm run dev
+   ```
+   Your app will be available at `http://localhost:5173/` (default Vite port).
 
-### 2️⃣ Backend Setup
+## 📦 Build for Production
 
 ```bash
-cd backend
-npm install
+npm run build
 ```
 
-* Create a `.env` file inside `/backend`:
+The production-ready files will be generated in the `dist/` directory.
 
-```
-OPENWEATHER_API_KEY=your_openweathermap_api_key
-```
-
-* Start the backend server:
-
+To preview the production build:
 ```bash
-node index.js
+npm run preview
 ```
 
-(Default: [http://localhost:5000](http://localhost:5000))
+## 🎯 API Integration
 
----
+WeatherWise uses the [OpenWeatherMap API](https://openweathermap.org/api) to fetch weather data. You'll need to:
 
-### 3️⃣ Frontend Setup
+1. Sign up for a free account at OpenWeatherMap
+2. Obtain your API key
+3. Add it to your environment variables as shown above
 
-```bash
-cd ../frontend
-npm install
+## 📁 Project Structure
+
+```
+weatherwise/
+├── public/
+│   └── favicon.ico
+├── src/
+│   ├──assets/
+│   │   ├── clear.png/
+│   │   ├── cloud.png/
+│   │   ├── drizzle.png/
+│   │   ├── humidity.png/
+│   │   ├── logo.png/
+│   │   ├── rain.png/
+│   │   ├── search.png/
+│   │   ├── snow.png/
+│   │   ├── wind.png/
+│   ├── components/
+│   │   ├── weather.css/
+│   │   ├── weather.jsx/
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+├── index.html
+├── package.json
+└── vite.config.js
 ```
 
-* Start the development server:
+## 🎨 Customization
 
-```bash
-npm start
-```
+### Favicon
+To change the favicon, replace the file in the `public/` directory and update the `<link rel="icon" />` tag in `index.html`.
 
-(Default: [http://localhost:3000](http://localhost:3000))
+### Styling
+The project uses SCSS for styling. Modify the files in the `src/styles/` directory to customize the appearance.
 
-⚠️ **Note:** The backend server must be running for the frontend to fetch weather data.
+## 🤝 Contributing
 
----
+We welcome contributions to WeatherWise! Please follow these steps:
 
-## 🌐 Usage
+1. Fork this repository
+2. Create a new branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-* Enter a city name or use **Current Location**.
-* Toggle between °C and °F.
-* View **5-day forecasts** with interactive charts and weather icons.
+Please make sure to update tests as appropriate and follow the coding style guidelines.
 
----
+## 📝 License
 
-## ⚠️ Error Handling
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-* Invalid city names → shows a user-friendly message.
-* Geolocation denied → prompts for manual city entry.
-* API errors → gracefully handled with alerts.
+## 🙏 Acknowledgments
 
----
+- Weather data provided by [OpenWeatherMap](https://openweathermap.org/)
+- Icons from [React Icons](https://react-icons.github.io/react-icons/)
+- Built with [Vite](https://vitejs.dev/) and [React](https://reactjs.org/)
 
-## 📦 Deployment
+## 📞 Support
 
-* **Frontend:** Deploy on [Vercel](https://vercel.com/) or [Netlify](https://www.netlify.com/)
-* **Backend:** Deploy on [Render](https://render.com/), [Railway](https://railway.app/), or [Heroku](https://heroku.com/)
-
-👉 Update the frontend’s `BACKEND_URL` with your deployed backend URL.
-
----
-
-## 💡 Future Enhancements
-
-* 🌙 Dark/Light mode toggle
-* ⭐ Save favorite cities (local storage)
-* 🕒 Hourly forecasts
-* 🌍 Internationalization (multi-language support)
+If you have any questions or issues, please open an issue on GitHub or contact us.
 
 ---
 
-## 📜 License
-
-This project is licensed under the **MIT License**.
-
----
-
-## 🙌 Credits
-
-* [OpenWeatherMap API](https://openweathermap.org/api)
-* [Tailwind CSS](https://tailwindcss.com/)
-* [Chart.js](https://www.chartjs.org/)
-
----
-
-✨ Stay informed with **WeatherWise** — your smart weather companion!
->>>>>>> efbaf9465c7fe1c4d870ac55780d0b8fe5080d00
+*Happy coding with WeatherWise! Stay informed, rain or shine!* ☀️🌧️❄️
