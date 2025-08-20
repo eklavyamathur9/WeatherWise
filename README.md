@@ -16,8 +16,8 @@ WeatherWise is a modern, responsive weather forecast application built with Vite
 
 Check out the live application here: [WeatherWise Live](https://weather-wise-orpin-one.vercel.app/)
 
-![WeatherWise Screenshot](<img width="604" height="808" alt="image" src="https://github.com/user-attachments/assets/3bdbf799-03ce-4591-8d9e-702aaa588094" />
-)
+<img width="604" height="808" alt="screenshot" src="https://github.com/user-attachments/assets/c140f10d-3ba5-4971-8dd9-3992ab46abca" />
+
 
 ## 🛠️ Getting Started
 
